@@ -1,6 +1,7 @@
 name: Release Pipeline
 
 on:
+  push:
   workflow_dispatch:
     inputs:
       package_name:
