@@ -170,9 +170,10 @@ jobs:
       run: |
         echo "packageing for ${{ env.PACKAGE_NAME }}"
         npx lerna exec --scope "@shichengsh001/${{ env.PACKAGE_NAME }}" -- npm pack
-        ls -l ./
-
-        echo "TARBALL=$(ls packages/*.tgz)" >> $GITHUB_ENV
+        ls -lrt ./
+        TARBALL=$(find . -type f -name "*.tgz" | head -n 1)
+        echo "TARBALL: $TARBALL"
+        echo "TARBALL=$TARBALL" >> $GITHUB_ENV
       env:
         NPM_CONFIG_USERCONFIG: ${{ runner.temp }}/.npmrc
         # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
