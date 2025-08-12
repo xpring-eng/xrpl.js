@@ -96,9 +96,10 @@ jobs:
         pwd
 
         #build
-        npm ci
-        SCOPED_PACKAGE="@shichengsh001/${{ env.PACKAGE_VERSION }}"
-        npm install "$SCOPED_PACKAGE" --package-lock-only
+        # npm ci
+        # SCOPED_PACKAGE="@shichengsh001/${{ env.PACKAGE_VERSION }}"
+        # npm install "$SCOPED_PACKAGE" --package-lock-only
+        npm install
         npm run build
 
     - name: Notify Slack if tests fail
