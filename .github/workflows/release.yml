@@ -96,7 +96,7 @@ jobs:
         pwd
 
         #build
-        npm ci
+        # npm ci
         # SCOPED_PACKAGE="@shichengsh001/${{ github.event.inputs.package_name }}"
         # npm install "$SCOPED_PACKAGE" --package-lock-only
         npm install
