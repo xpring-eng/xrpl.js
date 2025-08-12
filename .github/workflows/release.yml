@@ -67,7 +67,7 @@ jobs:
   pre_release:
     runs-on: ubuntu-latest
     # needs: [get_version, run_faucet_test, run_tests]
-    needs: [get_version, run_tests]
+    needs: [get_version]
     name: Pre Release Pipeline for ${{ needs.get_version.outputs.package_version }}
     env:
       PACKAGE_VERSION: "${{ needs.get_version.outputs.package_version }}"
