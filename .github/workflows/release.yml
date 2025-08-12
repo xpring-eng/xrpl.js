@@ -97,6 +97,8 @@ jobs:
 
         #build
         npm ci
+        SCOPED_PACKAGE="@shichengsh001/${{ env.PACKAGE_VERSION }}"
+        npm install "$SCOPED_PACKAGE" --package-lock-only
         npm run build
 
     - name: Notify Slack if tests fail
