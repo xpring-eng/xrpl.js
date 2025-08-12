@@ -1,5 +1,10 @@
 name: Release Pipeline
 
+permissions:
+  id-token: write
+  contents: read
+  attestations: write
+
 on:
   workflow_dispatch:
     inputs:
@@ -78,6 +83,7 @@ jobs:
       with:
         node-version: 20
         registry-url: 'https://registry.npmjs.org'
+        provenance: true
 
     - name: Build package
       run: |
@@ -162,7 +168,12 @@ jobs:
         echo "TARBALL=$(ls packages/${{ env.PACKAGE_NAME }}/*.tgz)" >> $GITHUB_ENV
       env:
         NPM_CONFIG_USERCONFIG: ${{ runner.temp }}/.npmrc
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+    - name: Attest build provenance
+      uses: actions/attest-build-provenance@v1
+      with:
+        subject-path: ${{ env.TARBALL }}
 
     - name: Upload tarball as artifact
       uses: actions/upload-artifact@v4
@@ -232,7 +243,6 @@ jobs:
       with:
         tag_name: "${{ env.PACKAGE_NAME }}@${{ env.PACKAGE_VERSION }}"
         name: "${{ env.PACKAGE_NAME }}@${{ env.PACKAGE_VERSION }}"
-        draft: false
         prerelease: ${{ github.event.inputs.dry-run == 'true' }}
 
     - name: Download artifact
