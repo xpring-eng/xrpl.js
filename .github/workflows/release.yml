@@ -246,12 +246,12 @@ jobs:
       with:
         ref: ${{ github.event.inputs.git_ref }}
         fetch-depth: 0
-    - name: Create GitHub release
-      uses: softprops/action-gh-release@v2
-      with:
-        tag_name: "${{ env.PACKAGE_NAME }}@${{ env.PACKAGE_VERSION }}"
-        name: "${{ env.PACKAGE_NAME }}@${{ env.PACKAGE_VERSION }}"
-        prerelease: ${{ github.event.inputs.dry-run == 'true' }}
+    # - name: Create GitHub release
+    #   uses: softprops/action-gh-release@v2
+    #   with:
+    #     tag_name: "${{ env.PACKAGE_NAME }}@${{ env.PACKAGE_VERSION }}"
+    #     name: "${{ env.PACKAGE_NAME }}@${{ env.PACKAGE_VERSION }}"
+    #     prerelease: ${{ github.event.inputs.dry-run == 'true' }}
 
     - name: Download artifact
       uses: actions/download-artifact@v4
