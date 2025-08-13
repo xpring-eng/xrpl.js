@@ -85,7 +85,6 @@ jobs:
       with:
         node-version: 20
         registry-url: 'https://registry.npmjs.org'
-        provenance: true
 
     - name: Build package
       run: |
