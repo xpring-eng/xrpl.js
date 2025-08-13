@@ -177,11 +177,6 @@ jobs:
         NPM_CONFIG_USERCONFIG: ${{ runner.temp }}/.npmrc
         # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-    - name: Attest build provenance
-      uses: actions/attest-build-provenance@v1
-      with:
-        subject-path: ${{ env.TARBALL }}
-
     - name: Upload tarball as artifact
       uses: actions/upload-artifact@v4
       with:
@@ -270,7 +265,7 @@ jobs:
         PKG=$(ls *.tgz)
         echo $PKG
         if [[ "${{ github.event.inputs.dry-run }}" == "true" ]]; then
-          npm publish "$PKG" --access public --registry=https://registry.npmjs.org/ --dry-run
+          npm publish "$PKG" --provenance --access public --registry=https://registry.npmjs.org/ --dry-run
         else
           npm publish "$PKG" --provenance --access public --registry=https://registry.npmjs.org/
         fi
