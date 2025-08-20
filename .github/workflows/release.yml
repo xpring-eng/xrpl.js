@@ -248,6 +248,27 @@ jobs:
       with:
         ref: ${{ github.event.inputs.git_ref }}
         fetch-depth: 0
+    - name: Ensure Git tag exists
+      id: create_tag
+      run: |
+        TAG="${{ env.PACKAGE_NAME }}@${{ env.PACKAGE_VERSION }}"
+        if git rev-parse "$TAG" >/dev/null 2>&1; then
+          echo "Tag $TAG already exists"
+        else
+          echo "Creating tag $TAG"
+          git tag "$TAG"
+          git push origin "$TAG"
+        fi
+    - name: Package source code
+      run: |
+        mkdir -p dist
+        # Assuming these env vars are set in the workflow:
+
+        mkdir -p dist
+        git archive --format=zip -o "dist/xrpl.js-${{ env.PACKAGE_NAME }}-${{ env.PACKAGE_VERSION }}.zip" HEAD
+        git archive --format=tar.gz -o "dist/xrpl.js-${{ env.PACKAGE_NAME }}-${{ env.PACKAGE_VERSION }}.tar.gz" HEAD
+
+
     - name: Create GitHub release
       uses: softprops/action-gh-release@v2
       with:
@@ -255,6 +276,11 @@ jobs:
         name: "${{ env.PACKAGE_NAME }}@${{ env.PACKAGE_VERSION }}"
         draft: ${{ github.event.inputs.dry-run == 'true' }}
         prerelease: false
+        generate_release_notes: true
+        files: |
+          "dist/xrpl.js-${{ env.PACKAGE_NAME }}-${{ env.PACKAGE_VERSION }}.zip"
+          "dist/xrpl.js-${{ env.PACKAGE_NAME }}-${{ env.PACKAGE_VERSION }}.tar.gz"
+
     - name: Download artifact
       uses: actions/download-artifact@v4
       with:
