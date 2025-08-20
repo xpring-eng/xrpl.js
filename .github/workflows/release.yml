@@ -255,7 +255,6 @@ jobs:
         name: "${{ env.PACKAGE_NAME }}@${{ env.PACKAGE_VERSION }}"
         draft: ${{ github.event.inputs.dry-run == 'true' }}
         prerelease: false
-        generate_release_notes: true
     - name: Download artifact
       uses: actions/download-artifact@v4
       with:
