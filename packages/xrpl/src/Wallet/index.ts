@@ -147,7 +147,6 @@ export class Wallet {
    * @throws ValidationError when signing algorithm isn't valid
    */
   public static generate(algorithm: ECDSA = DEFAULT_ALGORITHM): Wallet {
-    console.log("test release")
     if (!Object.values(ECDSA).includes(algorithm)) {
       throw new ValidationError('Invalid cryptographic signing algorithm')
     }

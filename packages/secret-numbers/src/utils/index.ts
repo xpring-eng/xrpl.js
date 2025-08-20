@@ -73,7 +73,6 @@ function secretToEntropy(secret: string[]): Uint8Array {
 }
 
 function parseSecretString(secret: string): string[] {
-  console.log("test release")
   const normalizedSecret = secret.replace(/[^0-9]/gu, '')
   if (normalizedSecret.length !== 48) {
     throw new Error(
