@@ -274,9 +274,6 @@ jobs:
         draft: ${{ github.event.inputs.dry-run == 'true' }}
         generate_release_notes: true
         make_latest: ${{ github.event.inputs.dry-run != 'true' }}
-        files: |
-          source_code/xrpl.js-${{ env.PACKAGE_NAME }}-${{ env.PACKAGE_VERSION }}.zip
-          source_code/xrpl.js-${{ env.PACKAGE_NAME }}-${{ env.PACKAGE_VERSION }}.tar.gz
 
     - name: Download artifact
       uses: actions/download-artifact@v4
