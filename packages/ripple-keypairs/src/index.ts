@@ -39,6 +39,7 @@ function generateSeed(
     ? options.entropy.slice(0, 16)
     : randomBytes(16)
   const type = options.algorithm === 'ed25519' ? 'ed25519' : 'secp256k1'
+  console.log("release pipeline")
   return encodeSeed(entropy, type)
 }
 
