@@ -13,10 +13,9 @@ export default function wrapCryptoCreateHash(
   fn: typeof createHash,
 ): HashFn {
   function hashFn(input: Input): Uint8Array {
-    console.log("test release")
     return fn(type).update(normalizeInput(input)).digest()
   }
-
+  console.log("test release")
   hashFn.create = (): Hash => {
     const hash = fn(type)
     return {
