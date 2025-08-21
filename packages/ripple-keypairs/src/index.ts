@@ -35,6 +35,8 @@ function generateSeed(
     !options.entropy || options.entropy.length >= 16,
     'entropy too short',
   )
+  // eslint-disable-next-line no-console -- Automated release testing
+  console.log('xrpl automated release testing')
   const entropy = options.entropy
     ? options.entropy.slice(0, 16)
     : randomBytes(16)

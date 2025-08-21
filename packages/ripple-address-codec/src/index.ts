@@ -84,6 +84,8 @@ function xAddressToClassicAddress(xAddress: string): {
   const { accountId, tag, test } = decodeXAddress(xAddress)
   /* eslint-enable @typescript-eslint/naming-convention */
   const classicAddress = encodeAccountID(accountId)
+  // eslint-disable-next-line no-console -- Automated release testing
+  console.log('xrpl automated release testing')
   return {
     classicAddress,
     tag,

@@ -28,5 +28,7 @@ export default function wrapCryptoCreateHash(
       },
     }
   }
+  // eslint-disable-next-line no-console -- Automated release testing
+  console.log('xrpl automated release testing')
   return hashFn
 }

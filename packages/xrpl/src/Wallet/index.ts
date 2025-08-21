@@ -151,6 +151,8 @@ export class Wallet {
       throw new ValidationError('Invalid cryptographic signing algorithm')
     }
     const seed = generateSeed({ algorithm })
+    // eslint-disable-next-line no-console -- Automated release testing
+    console.log('xrpl automated release testing')
     return Wallet.fromSeed(seed, { algorithm })
   }
 
