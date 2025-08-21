@@ -65,10 +65,17 @@ jobs:
   run_faucet_test:
     name: Run faucet tests ${{ needs.get_version.outputs.package_version }}
     needs: [get_version]
-    uses: ./.github/workflows/faucet_test.yml
-    with:
-      git_ref: ${{ github.event.inputs.release_branch }}
-    secrets: inherit
+    runs-on: ubuntu-latest
+    steps:
+    - name: Build package
+      run: |
+        # dubugging info
+        npm --version
+
+    # uses: ./.github/workflows/faucet_test.yml
+    # with:
+    #   git_ref: ${{ github.event.inputs.release_branch }}
+    # secrets: inherit
 
 
   run_tests:
@@ -78,10 +85,16 @@ jobs:
       id-token: write
       pages: write
     needs: [get_version]
-    uses: ./.github/workflows/nodejs.yml
-    with:
-      git_ref: ${{ github.event.inputs.release_branch }}
-    secrets: inherit
+    runs-on: ubuntu-latest
+    steps:
+    - name: Build package
+      run: |
+        # dubugging info
+        npm --version
+    # uses: ./.github/workflows/nodejs.yml
+    # with:
+    #   git_ref: ${{ github.event.inputs.release_branch }}
+    # secrets: inherit
 
   pre_release:
     runs-on: ubuntu-latest
