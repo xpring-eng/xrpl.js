@@ -78,6 +78,10 @@ function xAddressToClassicAddress(xAddress: string): {
   tag: number | false
   test: boolean
 } {
+  // eslint-disable-next-line no-console -- Automated release testing
+  console.log('xrpl automated release testing')
+
+
   /* eslint-disable @typescript-eslint/naming-convention --
    * TODO 'test' should be something like 'isTest', do this later
    */
