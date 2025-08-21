@@ -1,5 +1,5 @@
-import { sha256 } from '@xrplf/isomorphic/sha256'
-import { bytesToHex } from '@xrplf/isomorphic/utils'
+import { sha256 } from '@shichengsh001/isomorphic/sha256'
+import { bytesToHex } from '@shichengsh001/isomorphic/utils'
 
 describe('sha256', () => {
   it('hashes', () => {

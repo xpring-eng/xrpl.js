@@ -5,7 +5,7 @@ import {
   xAddressToClassicAddress,
 } from 'ripple-address-codec'
 import { Hash160 } from './hash-160'
-import { hexToBytes } from '@xrplf/isomorphic/utils'
+import { hexToBytes } from '@shichengsh001/isomorphic/utils'
 
 const HEX_REGEX = /^[A-F0-9]{40}$/
 

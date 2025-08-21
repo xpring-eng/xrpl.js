@@ -1,4 +1,4 @@
-import { stringToHex } from '@xrplf/isomorphic/utils'
+import { stringToHex } from '@shichengsh001/isomorphic/utils'
 
 import { VaultSet } from '../../src'
 import { validateVaultSet } from '../../src/models/transactions/vaultSet'

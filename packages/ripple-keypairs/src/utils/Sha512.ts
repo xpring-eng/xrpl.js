@@ -1,4 +1,4 @@
-import { sha512 } from '@xrplf/isomorphic/sha512'
+import { sha512 } from '@shichengsh001/isomorphic/sha512'
 import { bytesToNumberBE } from '@noble/curves/abstract/utils'
 
 type Input = Uint8Array | number[] | string

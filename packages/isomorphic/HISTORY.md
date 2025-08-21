@@ -1,4 +1,4 @@
-# @xrplf/isomorphic Release History
+# @shichengsh001/isomorphic Release History
 
 ## Unreleased
 

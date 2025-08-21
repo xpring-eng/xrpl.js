@@ -9,7 +9,7 @@ import {
 } from './enums'
 import { XrplDefinitions } from './enums/xrpl-definitions'
 import { coreTypes } from './types'
-import { bytesToHex } from '@xrplf/isomorphic/utils'
+import { bytesToHex } from '@shichengsh001/isomorphic/utils'
 
 const {
   signingData,

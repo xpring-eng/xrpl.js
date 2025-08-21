@@ -4,9 +4,9 @@ import {
   encodeAccountID,
   encodeSeed,
 } from 'ripple-address-codec'
-import { ripemd160 } from '@xrplf/isomorphic/ripemd160'
-import { sha256 } from '@xrplf/isomorphic/sha256'
-import { hexToBytes, randomBytes } from '@xrplf/isomorphic/utils'
+import { ripemd160 } from '@shichengsh001/isomorphic/ripemd160'
+import { sha256 } from '@shichengsh001/isomorphic/sha256'
+import { hexToBytes, randomBytes } from '@shichengsh001/isomorphic/utils'
 
 import { accountPublicFromPublicGenerator } from './signing-schemes/secp256k1/utils'
 import Sha512 from './utils/Sha512'

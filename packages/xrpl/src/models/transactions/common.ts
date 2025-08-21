@@ -1,5 +1,5 @@
 /* eslint-disable max-lines -- common utility file */
-import { HEX_REGEX, hexToString } from '@xrplf/isomorphic/utils'
+import { HEX_REGEX, hexToString } from '@shichengsh001/isomorphic/utils'
 import { isValidClassicAddress, isValidXAddress } from 'ripple-address-codec'
 import { TRANSACTION_TYPES } from 'ripple-binary-codec'
 

@@ -1,5 +1,5 @@
 {
-  "name": "@xrplf/isomorphic/ripemd160",
+  "name": "@shichengsh001/isomorphic/ripemd160",
   "private": true,
   "main": "../dist/ripemd160",
   "types": "../dist/ripemd160",

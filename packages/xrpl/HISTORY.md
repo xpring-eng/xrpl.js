@@ -146,8 +146,8 @@ Bundler configurations are much more simplified. See [../UNIQUE_STEPS](Unique St
 
 ### Non-Breaking Changes
 * Deprecated:
-  * `convertHexToString` in favor of `@xrplf/isomorphic/utils`'s `hexToString`
-  * `convertStringToHex` in favor of `@xrplf/isomorphic/utils`'s `stringToHex`
+  * `convertHexToString` in favor of `@shichengsh001/isomorphic/utils`'s `hexToString`
+  * `convertStringToHex` in favor of `@shichengsh001/isomorphic/utils`'s `stringToHex`
 
 ## 2.14.1 (2024-02-01)
 
