@@ -1,6 +1,6 @@
 {
-  "name": "xrpl",
-  "version": "4.4.1",
+  "name": "@shichengsh001/xrpl",
+  "version": "4.5.10",
   "license": "ISC",
   "description": "A TypeScript/JavaScript API for interacting with the XRP Ledger in Node.js and the browser",
   "files": [
@@ -69,7 +69,7 @@
   "prettier": "@xrplf/prettier-config",
   "repository": {
     "type": "git",
-    "url": "git@github.com:XRPLF/xrpl.js.git"
+    "url": "git@github.com:xpring-eng/xrpl.js.git"
   },
   "readmeFilename": "README.md",
   "keywords": [
