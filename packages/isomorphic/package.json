@@ -1,6 +1,6 @@
 {
   "name": "@shichengsh001/isomorphic",
-  "version": "2.0.0-rc.2",
+  "version": "3.0.0",
   "description": "A collection of isomorphic and tree-shakeable crypto hashes and utils for xrpl.js",
   "keywords": [
     "crypto",
