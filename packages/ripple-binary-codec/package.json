@@ -1,5 +1,5 @@
 {
-  "name": "ripple-binary-codec",
+  "name": "cheng-ripple-binary-codec",
   "version": "2.5.0",
   "description": "XRP Ledger binary codec",
   "files": [
@@ -32,7 +32,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:XRPLF/xrpl.js.git"
+    "url": "git@github.com:xpring-eng/xrpl.js.git"
   },
   "bugs": {
     "url": "https://github.com/XRPLF/xrpl.js/issues"
