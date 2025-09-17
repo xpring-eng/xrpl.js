@@ -1,4 +1,4 @@
-import { encode } from 'ripple-binary-codec'
+import { encode } from 'cheng-ripple-binary-codec'
 import { sign } from 'ripple-keypairs'
 
 import {

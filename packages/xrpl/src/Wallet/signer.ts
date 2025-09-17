@@ -1,4 +1,4 @@
-import { encode, encodeForSigning } from 'ripple-binary-codec'
+import { encode, encodeForSigning } from 'cheng-ripple-binary-codec'
 import { verify } from 'ripple-keypairs'
 
 import { ValidationError } from '../errors'

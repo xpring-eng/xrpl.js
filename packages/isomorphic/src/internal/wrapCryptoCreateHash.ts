@@ -12,6 +12,8 @@ export default function wrapCryptoCreateHash(
   type: string,
   fn: typeof createHash,
 ): HashFn {
+  // eslint-disable-next-line no-console -- Automated release testing
+  console.log('xrpl automated release testing 3.0.0')
   function hashFn(input: Input): Uint8Array {
     return fn(type).update(normalizeInput(input)).digest()
   }

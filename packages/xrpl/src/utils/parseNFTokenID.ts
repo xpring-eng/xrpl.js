@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers -- Doing hex string parsing. */
-import { hexToBytes } from '@xrplf/isomorphic/utils'
+import { hexToBytes } from '@shichengsh001/isomorphic/utils'
 import BigNumber from 'bignumber.js'
 import { encodeAccountID } from 'ripple-address-codec'
 
