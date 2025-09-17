@@ -4,16 +4,16 @@ import { wordlist } from '@scure/bip39/wordlists/english'
 import { bytesToHex } from '@shichengsh001/isomorphic/utils'
 import BigNumber from 'bignumber.js'
 import {
+  encodeForSigning,
+  encodeForMultisigning,
+  encode,
+} from 'cheng-ripple-binary-codec'
+import {
   classicAddressToXAddress,
   isValidXAddress,
   xAddressToClassicAddress,
   encodeSeed,
 } from 'ripple-address-codec'
-import {
-  encodeForSigning,
-  encodeForMultisigning,
-  encode,
-} from 'ripple-binary-codec'
 import {
   deriveAddress,
   deriveKeypair,
