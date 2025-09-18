@@ -1,6 +1,6 @@
 {
-  "name": "@shichengsh001/isomorphic",
-  "version": "3.0.0",
+  "name": "@xrplf/isomorphic",
+  "version": "1.0.1",
   "description": "A collection of isomorphic and tree-shakeable crypto hashes and utils for xrpl.js",
   "keywords": [
     "crypto",
@@ -38,12 +38,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:xpring-eng/xrpl.js.git"
+    "url": "git@github.com:XRPLF/xrpl.js.git"
   },
   "license": "ISC",
   "prettier": "@xrplf/prettier-config",
   "engines": {
     "node": ">=18.0.0"
-  },
-  "gitHead": "9ecf80ce3767e32a9009a14e4ec2f38f71c3acb3"
+  }
 }

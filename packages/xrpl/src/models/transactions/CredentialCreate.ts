@@ -1,4 +1,4 @@
-import { HEX_REGEX } from '@shichengsh001/isomorphic/utils'
+import { HEX_REGEX } from '@xrplf/isomorphic/utils'
 
 import { ValidationError } from '../../errors'
 

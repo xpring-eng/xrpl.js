@@ -1,8 +1,4 @@
-import {
-  bytesToHex,
-  hexToBytes,
-  stringToHex,
-} from '@shichengsh001/isomorphic/utils'
+import { bytesToHex, hexToBytes, stringToHex } from '@xrplf/isomorphic/utils'
 
 import {
   codec,

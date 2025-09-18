@@ -1,19 +1,19 @@
 import { HDKey } from '@scure/bip32'
 import { mnemonicToSeedSync, validateMnemonic } from '@scure/bip39'
 import { wordlist } from '@scure/bip39/wordlists/english'
-import { bytesToHex } from '@shichengsh001/isomorphic/utils'
+import { bytesToHex } from '@xrplf/isomorphic/utils'
 import BigNumber from 'bignumber.js'
-import {
-  encodeForSigning,
-  encodeForMultisigning,
-  encode,
-} from 'cheng-ripple-binary-codec'
 import {
   classicAddressToXAddress,
   isValidXAddress,
   xAddressToClassicAddress,
   encodeSeed,
 } from 'ripple-address-codec'
+import {
+  encodeForSigning,
+  encodeForMultisigning,
+  encode,
+} from 'ripple-binary-codec'
 import {
   deriveAddress,
   deriveKeypair,

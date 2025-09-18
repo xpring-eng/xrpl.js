@@ -1,8 +1,8 @@
 import BigNumber from 'bignumber.js'
 import { assert } from 'chai'
-import { decode } from 'cheng-ripple-binary-codec'
 import omit from 'lodash/omit'
 import throttle from 'lodash/throttle'
+import { decode } from 'ripple-binary-codec'
 
 import {
   Client,
