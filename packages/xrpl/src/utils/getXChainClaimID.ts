@@ -1,4 +1,4 @@
-import { decode } from 'cheng-ripple-binary-codec'
+import { decode } from 'ripple-binary-codec'
 
 import {
   CreatedNode,

@@ -1,4 +1,4 @@
-import { concat, equal, hexToBytes } from '@shichengsh001/isomorphic/utils'
+import { concat, equal, hexToBytes } from '@xrplf/isomorphic/utils'
 
 import {
   codec,

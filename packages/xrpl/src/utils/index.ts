@@ -1,11 +1,4 @@
 import {
-  encode as rbcEncode,
-  decode as rbcDecode,
-  encodeForMultisigning as rbcEncodeForMultisigning,
-  encodeForSigning as rbcEncodeForSigning,
-  encodeForSigningClaim as rbcEncodeForSigningClaim,
-} from 'cheng-ripple-binary-codec'
-import {
   classicAddressToXAddress,
   decodeAccountID,
   decodeAccountPublic,
@@ -21,6 +14,13 @@ import {
   isValidXAddress,
   xAddressToClassicAddress,
 } from 'ripple-address-codec'
+import {
+  encode as rbcEncode,
+  decode as rbcDecode,
+  encodeForMultisigning as rbcEncodeForMultisigning,
+  encodeForSigning as rbcEncodeForSigning,
+  encodeForSigningClaim as rbcEncodeForSigningClaim,
+} from 'ripple-binary-codec'
 import { verify as verifyKeypairSignature } from 'ripple-keypairs'
 
 import type { APIVersion } from '../models'

@@ -1,4 +1,4 @@
-import { encodeForSigningClaim } from 'cheng-ripple-binary-codec'
+import { encodeForSigningClaim } from 'ripple-binary-codec'
 import { sign } from 'ripple-keypairs'
 
 import { Wallet } from './index'

@@ -57,7 +57,6 @@ class Sha512Half extends BytesList {
  * @returns the sha512half hash of the arguments.
  */
 function sha512Half(...args: Uint8Array[]): Uint8Array {
-  console.log('xrpl automated release testing xxx')
   const hash = new Sha512Half()
   args.forEach((a) => hash.put(a))
   return hash.finish256()

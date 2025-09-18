@@ -12,7 +12,7 @@
       "path": "../ripple-address-codec/tsconfig.build.json"
     },
     {
-      "path": "../cheng-ripple-binary-codec/tsconfig.json"
+      "path": "../ripple-binary-codec/tsconfig.json"
     },
     {
       "path": "../ripple-keypairs/tsconfig.json"

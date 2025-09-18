@@ -73,8 +73,6 @@ function secretToEntropy(secret: string[]): Uint8Array {
 }
 
 function parseSecretString(secret: string): string[] {
-  // eslint-disable-next-line no-console -- Automated release testing
-  console.log('xrpl automated release testing')
   const normalizedSecret = secret.replace(/[^0-9]/gu, '')
   if (normalizedSecret.length !== 48) {
     throw new Error(
