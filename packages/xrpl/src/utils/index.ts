@@ -68,7 +68,7 @@ import verifyPaymentChannelClaim from './verifyPaymentChannelClaim'
 import { xrpToDrops, dropsToXrp } from './xrpConversion'
 
 /**
- * Check if a secret is valid.
+ * Check if a secret is really valid.
  *
  * @param secret - Secret to test for validity.
  * @returns True if secret can be derived into a keypair.
