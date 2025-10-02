@@ -1,6 +1,6 @@
 {
   "name": "cheng-xrpl",
-  "version": "4.4.73",
+  "version": "4.4.73-beta.2",
   "license": "ISC",
   "description": "A TypeScript/JavaScript API for interacting with the XRP Ledger in Node.js and the browser",
   "files": [
