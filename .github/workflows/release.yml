@@ -46,6 +46,7 @@ jobs:
           PKG_NAME: ${{ github.event.inputs.package_name }}
           REPO: ${{ github.repository }}
           RELEASE_BRANCH: ${{ github.event.inputs.release_branch_name }}
+          PKG_NAME: ${{ github.event.inputs.package_name }}
           NPM_DIST_TAG: ${{ github.event.inputs.npmjs_dist_tag }}
         run: |
           set -euo pipefail
